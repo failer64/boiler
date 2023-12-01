@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+ссылка на gh-pages: https://failer64.github.io/boilerplate/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
