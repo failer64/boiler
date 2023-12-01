@@ -5,7 +5,6 @@ import Flex from 'components/shared-components/Flex'
 import { useState } from 'react';
 
 const avatarEndpoint = 'https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188';
-const defaultAvatarUrl = '/img/avatars/thumb-6.jpg';
 
 export const EditProfile = (
 	{ user, updateUser, userProfileVisible, closeUserProfile }
@@ -65,7 +64,6 @@ export const EditProfile = (
 
 	const onRemoveAvater = () => {
 		updateUser({ ...user, avatarUrl: '' });
-		//avatar = '';
 	}
 
 	return (
@@ -77,7 +75,7 @@ export const EditProfile = (
 			closable={false}
 		>
 			<Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
-				<Avatar size={90} src={user.avatarUrl || defaultAvatarUrl} icon={<UserOutlined />} />
+				<Avatar size={90} src={user.avatarUrl} icon={<UserOutlined />} />
 				<div className="ml-md-3 mt-md-0 mt-3">
 					<Upload onChange={onUploadAavater} accept='image/*'
 						showUploadList={false} action={avatarEndpoint}>

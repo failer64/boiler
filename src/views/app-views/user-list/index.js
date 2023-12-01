@@ -5,7 +5,6 @@ import EditProfile from './EditProfile';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import axios from 'axios';
 import utils from 'utils';
-const defaultAvatarUrl = '/img/avatars/thumb-1.jpg';
 
 
 export function UserList() {
@@ -53,7 +52,7 @@ export function UserList() {
 			dataIndex: 'name',
 			render: (_, record) => (
 				<div className="d-flex">
-					<AvatarStatus src={record.img || defaultAvatarUrl} name={record.name} subTitle={record.email} />
+					<AvatarStatus src={record.img} name={record.name} subTitle={record.email} />
 				</div>
 			),
 			sorter: {
